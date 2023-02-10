@@ -5,18 +5,22 @@
 [ext_resource path="res://Audio/bulletFire.wav" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 4.63879, 4.41854 )
+extents = Vector2( 3.10687, 4.41854 )
 
 [node name="Bullet" type="KinematicBody2D"]
-position = Vector2( 193.956, 142.277 )
+position = Vector2( 589.148, 655.242 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 197.608, -3.92575 )
+scale = Vector2( 0.015625, 1.32715 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 88.9838, -5.23431 )
 shape = SubResource( 1 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( -189.53, -138.928 )
 stream = ExtResource( 3 )
 autoplay = true
