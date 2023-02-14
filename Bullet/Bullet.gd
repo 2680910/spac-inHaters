@@ -13,10 +13,15 @@ func _ready():
 
 func _physics_process(delta):
 	var collidedObject = move_and_collide(Vector2(0, -speed*delta))
-	if (collidedObject):
-		
-		queue_free()
+
+func _process(delta):
+	if Input.is_action_just_pressed("fire"):
 		GlobalVariables.bulletInstanceCount -= 1 
+		var bulletInstance = bulletSource.instance()
+		bulletInstance.position = Vector2(position.x, position.y-20)
+		get_tree().get_root().add_child(bulletInstance)
+		
+
 
 
 
