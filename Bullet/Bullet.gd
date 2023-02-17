@@ -1,4 +1,5 @@
 extends KinematicBody2D
+
 var speed = 500 
 
 # Declare member variables here. Examples:
@@ -13,14 +14,14 @@ func _ready():
 
 func _physics_process(delta):
 	var collidedObject = move_and_collide(Vector2(0, -speed*delta))
+	if (collidedObject):
+		if "Enemy" in collidedObject.collider.name:
+			collidedObject.get_collider().queue_free()
+		queue_free()
+		GlobalVariables.bulletInstanceCount -= 1
 
-func _process(delta):
-	if Input.is_action_just_pressed("fire"):
-		GlobalVariables.bulletInstanceCount -= 1 
-		var bulletInstance = bulletSource.instance()
-		bulletInstance.position = Vector2(position.x, position.y-20)
-		get_tree().get_root().add_child(bulletInstance)
-		
+
+
 
 
 
