@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Audio/backgroundMusic.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://MainGame/MainGame.gd" type="Script" id=4]
 [ext_resource path="res://Enemy/Enemies.gd" type="Script" id=5]
 [ext_resource path="res://ExampleCode.gd" type="Script" id=6]
 
@@ -13,16 +14,19 @@ extents = Vector2( 20.9622, 380.576 )
 extents = Vector2( 662.058, 10 )
 
 [node name="SpaceInvaders" type="Control"]
-margin_left = 11.0726
-margin_top = 24.1683
-margin_right = 1291.07
-margin_bottom = 744.169
+margin_left = 12.8137
+margin_top = 25.9094
+margin_right = 1292.81
+margin_bottom = 745.91
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+countdownMax = 15
 
 [node name="HUD" type="HBoxContainer" parent="."]
-margin_right = 40.0
+margin_top = -2.0
+margin_right = 102.0
 margin_bottom = 40.0
 script = ExtResource( 6 )
 __meta__ = {
@@ -30,24 +34,24 @@ __meta__ = {
 }
 
 [node name="Countdown" type="Label" parent="HUD"]
-margin_top = 13.0
-margin_bottom = 27.0
+margin_top = 14.0
+margin_bottom = 28.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CurrentScoreLabel" type="Label" parent="HUD"]
 margin_left = 4.0
-margin_top = 13.0
+margin_top = 14.0
 margin_right = 90.0
-margin_bottom = 27.0
+margin_bottom = 28.0
 text = "Current Score"
 
 [node name="CurrentScore" type="Label" parent="HUD"]
 margin_left = 94.0
-margin_top = 13.0
+margin_top = 14.0
 margin_right = 102.0
-margin_bottom = 27.0
+margin_bottom = 28.0
 text = "0"
 
 [node name="Border_Left" type="Area2D" parent="." groups=[
@@ -56,7 +60,7 @@ text = "0"
 position = Vector2( -1.53629, 369.479 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Left"]
-position = Vector2( -5.37702, -9.64456 )
+position = Vector2( -43.6804, -28.7962 )
 shape = SubResource( 1 )
 
 [node name="Border_Right" type="Area2D" parent="." groups=[
