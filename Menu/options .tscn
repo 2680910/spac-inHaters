@@ -1,14 +1,15 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Menu/autofire .gd" type="Script" id=1]
+[ext_resource path="res://Menu/return .gd" type="Script" id=2]
 
 [node name="options " type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 164.344
-margin_top = 199.799
-margin_right = 164.344
-margin_bottom = 199.799
+margin_left = -3.26471
+margin_top = -5.40767
+margin_right = -3.26465
+margin_bottom = -5.40765
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -45,8 +46,10 @@ margin_top = 44.0
 margin_right = 180.0
 margin_bottom = 64.0
 text = "Return to menu"
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/autofire " to="VBoxContainer/HBoxContainer/autofire " method="_on_autofire__pressed"]
 [connection signal="toggled" from="VBoxContainer/HBoxContainer/autofire " to="VBoxContainer/HBoxContainer/autofire " method="_on_autofire__toggled"]
+[connection signal="pressed" from="VBoxContainer/return " to="VBoxContainer/return " method="_on_return__pressed"]
