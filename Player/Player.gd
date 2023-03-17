@@ -19,8 +19,8 @@ func _process(delta):
 				bulletInstance.position = Vector2(position.x, position.y-20)
 				get_tree().get_root().add_child(bulletInstance)
 
-	elif Input.is_action_just_pressed("fire"):
-		if GlobalVariables.bulletInstanceCount < 30:
+	elif Input.is_action_pressed("fire"):
+		if GlobalVariables.bulletInstanceCount < 3:
 			var bulletInstance = bulletSource.instance()
 			bulletInstance.position = Vector2(position.x, position.y-20)
 			get_tree().get_root().add_child(bulletInstance)
@@ -40,5 +40,6 @@ var scoringInformation = {
 	"currentScore": 0,
 	"currentPlayer": "User",
 	"highScore": 0,
-	"highScorePlayersName" : "Winner"
-}
+	"highScorePlayersName" : "Winner"}
+
+
