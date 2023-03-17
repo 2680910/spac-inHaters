@@ -5,7 +5,7 @@ var currentTimer
 
 
 func _ready():
-	currentTimer = countdownMax
+	currentTimer = countdownMax 
 	$HUD/Countdown.text = str(currentTimer)
 	
 	while currentTimer > 0:
