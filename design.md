@@ -34,10 +34,11 @@ gantt
     Code Structure:  08-05-23, 3d
     Testing: 08-04-23, 30d
     Export Game: 01-06-23, 1d
-   
+    Fixing Bugs: 09-05-23, 25d
    
    
     section Project Mangement
+    Read Assessment Task: 05-04-23, 1d
     Code Comments: 01-06-23, 7d
     Final Submission: 07-06-23, 08-06-23, 1d 
 
