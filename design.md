@@ -18,13 +18,31 @@ gantt
     axisFormat %d-%B
     tickInterval 1week 
 
+   
     section Holidays
     school holidays: 09-04-23, 22-04-23
 
+    
     section Design
-    project overview: 05-04-23, 1d
-    project plan: 05-04-23, 24-04-23 
+    Project overview: 05-04-23, 1d
+    Project plan: 05-04-23, 24-04-23 
+    Behaviours: 24-04-23, 14d 
+    Programming Logic: 20-04-23, 14d
 
+   
+    section Implementation 
+    Code Structure:  08-05-23, 3d
+    Testing: 08-04-23, 30d
+    Export Game: 01-06-23, 1d
+   
+   
+   
     section Project Mangement
-    Final Submission: 07-06-23, 08-06-23
+    Code Comments: 01-06-23, 7d
+    Final Submission: 07-06-23, 08-06-23, 1d 
+
+
+
+
+
 ```
