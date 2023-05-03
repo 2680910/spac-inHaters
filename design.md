@@ -38,7 +38,7 @@ gantt
    
    
     section Project Mangement
-    Read Assessment Task: 05-04-23, 1d
+    Read Assessment Task: 05-04-23, 1d 
     Code Comments: 01-06-23, 7d
     Final Submission: 07-06-23, 08-06-23, 1d 
 
